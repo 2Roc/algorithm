@@ -1,7 +1,5 @@
 package class28;
 
-import java.util.Stack;
-
 /**
  * 匹配括号
  */
@@ -15,7 +13,8 @@ public class Problem_0020_ValidParentheses {
 		int N = str.length;
 		char[] stack = new char[N];
 		int size = 0;
-		for (char cha : str) {
+		for (int i = 0; i < N; i++) {
+			char cha = str[i];
 			if (cha == '(' || cha == '[' || cha == '{') {
 				stack[size++] = cha == '(' ? ')' : (cha == '[' ? ']' : '}');
 			} else {
@@ -29,22 +28,6 @@ public class Problem_0020_ValidParentheses {
 			}
 		}
 		return size == 0;
-	}
-
-	public boolean isValid2 (String s) {
-		Stack<Character> stack = new Stack<>();
-		if(s == null)return false;
-		for(char m:s.toCharArray()){
-			if('('==m)
-				stack.push(')');
-			else if('['==m)
-				stack.push(']');
-			else if('{'==m)
-				stack.push('}');
-			else if(stack.isEmpty() || stack.pop()!=m)
-				return false;
-		}
-		return stack.isEmpty();
 	}
 
 }

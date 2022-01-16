@@ -49,4 +49,5 @@ public class Code04_WalkToEnd {
 			cost = c;
 		}
 	}
+
 }

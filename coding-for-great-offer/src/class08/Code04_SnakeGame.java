@@ -175,8 +175,8 @@ public class Code04_SnakeGame {
 			int ans1 = zuo(matrix);
 			int ans2 = walk2(matrix);
 			if (ans1 != ans2) {
-				for (int[] ints : matrix) {
-					System.out.println(Arrays.toString(ints));
+				for (int j = 0; j < matrix.length; j++) {
+					System.out.println(Arrays.toString(matrix[j]));
 				}
 				System.out.println("Oops   ans1: " + ans1 + "   ans2:" + ans2);
 				break;

@@ -27,42 +27,4 @@ public class Problem_0062_UniquePaths {
 		return n == 0 ? m : gcd(n, m % n);
 	}
 
-	//额外空间O（1），时间是O（min（m，n））
-	public static int uniquePaths2 (int m, int n) {
-		if(m==1||n==1)return 1;
-		int k = m-1+n-1;
-		int v = Math.min(m-1,n-1);
-
-		long ans = 1;
-		for(int i=k;i>k-v;i--){
-			ans *= i;
-		}
-		for(int i=1;i<=v;i++){
-			ans /= i;
-		}
-		return (int)ans;
-	}
-
-	private static int uniquePaths3(int m, int n){
-		long ans =1;
-		for(int x=n,y=1;y<m;++x,++y){
-			ans = ans * x /y;
-		}
-		return (int)ans;
-	}
-
-	public static void main(String[] args) {
-		long start1 = System.currentTimeMillis();
-		System.out.println(uniquePaths(40, 40));
-		System.out.println("花费:"+(System.currentTimeMillis()-start1));
-
-		long start2 = System.currentTimeMillis();
-		System.out.println(uniquePaths2(40, 40));
-		System.out.println("花费:"+(System.currentTimeMillis()-start2));
-
-		long start3 = System.currentTimeMillis();
-		System.out.println(uniquePaths3(40, 40));
-		System.out.println("花费:"+(System.currentTimeMillis()-start3));
-	}
-
 }

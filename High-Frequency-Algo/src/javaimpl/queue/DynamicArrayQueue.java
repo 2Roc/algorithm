@@ -21,7 +21,9 @@ public class DynamicArrayQueue {
       // tail ==n && head==0，表示整个队列都占满了
       if (head == 0) return false;
       // 数据搬移
-      if (tail - head >= 0) System.arraycopy(items, head, items, 0, tail - head);
+      for (int i = head; i < tail; ++i) {
+        items[i-head] = items[i];
+      }
       // 搬移完之后重新更新head和tail
       tail -= head;
       head = 0;

@@ -1,9 +1,6 @@
 package class032;
 
-/**
- * 任意两个结点路径长度中的最大值就是二叉树的直径长度
- * https://leetcode.com/problems/diameter-of-binary-tree
- */
+// 测试链接：https://leetcode.com/problems/diameter-of-binary-tree
 public class Code04_DiameterOfBinaryTree {
 
 	public static class TreeNode {
@@ -36,23 +33,6 @@ public class Code04_DiameterOfBinaryTree {
 				leftInfo.height + rightInfo.height);
 		int height = Math.max(leftInfo.height, rightInfo.height) + 1;
 		return new Info(maxDistance, height);
-	}
-
-
-	int maxd = 0;
-	public int diameterOfBinaryTree2(TreeNode root){
-		process1(root);
-		return maxd;
-	}
-
-	public int process1(TreeNode head){
-		if(head==null)return 0;
-		int leftHeight = process1(head.left);
-		int rightHeight = process1(head.right);
-
-		maxd = Math.max(leftHeight+rightHeight,maxd);
-		//返回该节点为根的子树的深度
-		return Math.max(leftHeight,rightHeight)+1;
 	}
 
 }

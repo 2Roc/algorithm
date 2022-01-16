@@ -2,6 +2,7 @@ package javaimpl.queue;
 
 /**
  * 基于链表实现的队列
+ *
  */
 public class QueueBasedOnLinkedList {
 
@@ -55,4 +56,5 @@ public class QueueBasedOnLinkedList {
       return data;
     }
   }
+
 }

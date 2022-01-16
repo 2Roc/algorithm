@@ -1,6 +1,11 @@
 package class_2021_12_2_week;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 // 来自美团
 // 给定一棵多叉树的头节点head

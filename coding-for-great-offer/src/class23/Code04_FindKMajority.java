@@ -56,7 +56,10 @@ public class Code04_FindKMajority {
 			}
 		}
 		// 所有可能的候选，都在cands表中！遍历一遍arr，每个候选收集真实次数
-
+		
+		
+		
+		
 		HashMap<Integer, Integer> reals = getReals(arr, cands);
 		boolean hasPrint = false;
 		for (Entry<Integer, Integer> set : cands.entrySet()) {

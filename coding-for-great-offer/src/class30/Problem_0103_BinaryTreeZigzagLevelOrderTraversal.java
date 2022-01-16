@@ -2,10 +2,8 @@ package class30;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
-/**
- * 之字形打印二叉树
- */
 public class Problem_0103_BinaryTreeZigzagLevelOrderTraversal {
 
 	public static class TreeNode {
@@ -14,8 +12,8 @@ public class Problem_0103_BinaryTreeZigzagLevelOrderTraversal {
 		TreeNode right;
 	}
 
-	public static ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
-		ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
+	public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+		List<List<Integer>> ans = new ArrayList<>();
 		if (root == null) {
 			return ans;
 		}
@@ -25,7 +23,7 @@ public class Problem_0103_BinaryTreeZigzagLevelOrderTraversal {
 		boolean isHead = true;
 		while (!deque.isEmpty()) {
 			size = deque.size();
-			ArrayList<Integer> curLevel = new ArrayList<>();
+			List<Integer> curLevel = new ArrayList<>();
 			for (int i = 0; i < size; i++) {
 				TreeNode cur = isHead ? deque.pollFirst() : deque.pollLast();
 				curLevel.add(cur.val);
@@ -50,4 +48,5 @@ public class Problem_0103_BinaryTreeZigzagLevelOrderTraversal {
 		}
 		return ans;
 	}
+
 }

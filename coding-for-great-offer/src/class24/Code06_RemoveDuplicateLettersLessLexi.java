@@ -1,6 +1,6 @@
 package class24;
 
-// 本题测试链接  316。去除重复字母: https://leetcode.com/problems/remove-duplicate-letters/
+// 本题测试链接 : https://leetcode.com/problems/remove-duplicate-letters/
 public class Code06_RemoveDuplicateLettersLessLexi {
 
 	// 在str中，每种字符都要保留一个，让最后的结果，字典序最小 ，并返回

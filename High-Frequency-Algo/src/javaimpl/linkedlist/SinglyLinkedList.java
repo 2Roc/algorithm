@@ -192,8 +192,8 @@ public class SinglyLinkedList {
            return false;
         }
     }
+    //　判断是否为回文 
 
-    //　判断是否为回文
     public boolean palindrome(){
        if (head == null){
            return false;

@@ -23,12 +23,10 @@ public class Problem_0098_ValidateBinarySearchTree {
 					mostRight = mostRight.right;
 				}
 				if (mostRight.right == null) {
-					//第一次到达最右节点
 					mostRight.right = cur;
 					cur = cur.left;
 					continue;
 				} else {
-					//第二次到达，需要复原
 					mostRight.right = null;
 				}
 			}

@@ -11,14 +11,12 @@ public class Code05_CandyProblem {
 		}
 		int N = arr.length;
 		int[] left = new int[N];
-		//先从左到右遍历，若是右边得分高，那么就得到左边的糖果数+1
 		for (int i = 1; i < N; i++) {
 			if (arr[i - 1] < arr[i]) {
 				left[i] = left[i - 1] + 1;
 			}
 		}
 		int[] right = new int[N];
-		//从右向左遍历，若是左边比右边得分高，那么糖果数右边+1
 		for (int i = N - 2; i >= 0; i--) {
 			if (arr[i] > arr[i + 1]) {
 				right[i] = right[i + 1] + 1;

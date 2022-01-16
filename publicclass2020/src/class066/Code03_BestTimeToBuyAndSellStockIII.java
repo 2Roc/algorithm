@@ -1,6 +1,6 @@
-package BuyAndSellStock;
+package class066;
 
-//leetcode 123
+//leetcode题目 : https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/
 public class Code03_BestTimeToBuyAndSellStockIII {
 
 //	public static int maxProfit1(int[] prices) {
@@ -28,12 +28,20 @@ public class Code03_BestTimeToBuyAndSellStockIII {
 //				int second = prices[j] - prices[i];
 //				int first = doneOnceMax[i];// 0...i  只做一笔交易！获得的最大钱！
 //				int cur = first + second;
-//				ans
+//				ans 
+//				
+//				
 //			}
 //			return ans;
-//
+//			
 ////		}
-//
+//		
+//		
+//		
+//				
+//				
+//				
+//				
 //		for (int i = 1; i < n; i++) {
 //
 //		}
@@ -47,11 +55,13 @@ public class Code03_BestTimeToBuyAndSellStockIII {
 //		int n = prices.length;
 //		// 指标：doneOnceMinusOneBuyMax[i] : 0 ~ i上，一定要做完一次交易，还得扣除掉一次买入，
 //		// 所有情况中，整体的最优！
-//
+//		
+//		
+//		
 //		// 第一步：请把如下的含义结构生成
 //		int[] doneOnceMax = new int[n]; // 该怎么生成怎么生成！
 //		// doneOnceMax[i] : 0..i 做完一笔交易的最好钱数
-//
+//		
 //		// 第二步，把指标数组生成！
 //		int[] doneOnceMinusOneBuyMax = new int[n];
 //
@@ -72,7 +82,7 @@ public class Code03_BestTimeToBuyAndSellStockIII {
 //			int p2 =   doneOnceMax[i]     - prices[i];
 //			doneOnceMinusOneBuyMax[i] = Math.max(p1, p2);
 //		}
-//
+//		
 //		// 第三步
 //		int ans = 0;
 //		for(int i = 0; i < n; i++) {
@@ -80,8 +90,9 @@ public class Code03_BestTimeToBuyAndSellStockIII {
 //		}
 //		return ans;
 //	}
-
-
+	
+	
+	
 	public static int maxProfit(int[] prices) {
 		if (prices == null || prices.length < 2) {
 			return 0;
@@ -108,4 +119,5 @@ public class Code03_BestTimeToBuyAndSellStockIII {
 		}
 		return ans;
 	}
+
 }

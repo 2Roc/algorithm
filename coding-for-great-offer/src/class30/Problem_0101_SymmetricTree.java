@@ -1,9 +1,5 @@
 package class30;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
-// https://leetcode.com/problems/symmetric-tree
 public class Problem_0101_SymmetricTree {
 
 	public static class TreeNode {
@@ -29,25 +25,6 @@ public class Problem_0101_SymmetricTree {
 		}
 		// 一个为空，一个不为空  false
 		return false;
-	}
-
-	public  boolean isSymmetricUnRecure(TreeNode root){
-		if(root==null)return true;
-		Queue<TreeNode> queue = new LinkedList<>();
-		queue.offer(root.left);
-		queue.offer(root.right);
-		while(!queue.isEmpty()){
-			TreeNode cur1 = queue.poll();
-			TreeNode cur2 = queue.poll();
-			if(cur1 == null && cur2 ==null)continue;
-			if(cur1==null || cur2==null) return false;
-			if(cur1.val != cur2.val) return false;
-			queue.offer(cur1.left);
-			queue.offer(cur2.right);
-			queue.offer(cur1.right);
-			queue.offer(cur2.left);
-		}
-		return true;
 	}
 
 }

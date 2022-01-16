@@ -1,4 +1,4 @@
-package BuyAndSellStock;
+package buysellstock;
 
 //leetcode 309
 public class Code05_BestTimeToBuyAndSellStockWithCooldown {

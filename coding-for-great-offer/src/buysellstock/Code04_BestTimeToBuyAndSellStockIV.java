@@ -1,4 +1,4 @@
-package BuyAndSellStock;
+package buysellstock;
 
 //leetcode 188
 public class Code04_BestTimeToBuyAndSellStockIV {

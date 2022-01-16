@@ -1,4 +1,4 @@
-package class15;
+package buysellstock;
 
 import java.util.ArrayList;
 import java.util.HashMap;

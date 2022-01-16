@@ -1,4 +1,4 @@
-package BuyAndSellStock;
+package buysellstock;
 
 //leetcode 714
 public class Code06_BestTimeToBuyAndSellStockWithTransactionFee {

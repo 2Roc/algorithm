@@ -1,4 +1,4 @@
-package class15;
+package buysellstock;
 
 // 本题为leetcode原题
 // 测试链接：https://leetcode.com/problems/friend-circles/

@@ -1,4 +1,4 @@
-package BuyAndSellStock;
+package buysellstock;
 
 //leetcode 123
 public class Code03_BestTimeToBuyAndSellStockIII {

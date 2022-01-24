@@ -32,12 +32,6 @@ public class Code05_BSNearRight {
 		}
 		return -1;
 	}
-
-	// for test
-	//public static int[] generateRandomArray(int maxSize, int maxValue) {
-    //    return getInts(maxSize, maxValue);
-    //}
-
 	// for test
 	public static void printArray(int[] arr) {
 		if (arr == null) {

@@ -37,22 +37,24 @@ public class Code01_Light {
 		}
 	}
 
+	//空间复杂度O（1）
 	public static int minLight2(String road) {
 		char[] str = road.toCharArray();
-		int i = 0;
+		int index = 0;
 		int light = 0;
-		while (i < str.length) {
-			if (str[i] == 'X') {
-				i++;
+		while (index < str.length) {
+			if (str[index] == 'X') {
+				index++;
 			} else {
+				//str[index] == '.'
 				light++;
-				if (i + 1 == str.length) {
+				if (index + 1 == str.length) {
 					break;
-				} else { // 有i位置  i+ 1   X  .
-					if (str[i + 1] == 'X') {
-						i = i + 2;
+				} else { // 有i位置  index+ 1   X  .
+					if (str[index + 1] == 'X') {
+						index = index + 2;
 					} else {
-						i = i + 3;
+						index = index + 3;
 					}
 				}
 			}

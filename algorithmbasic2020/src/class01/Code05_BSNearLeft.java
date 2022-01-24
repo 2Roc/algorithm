@@ -32,19 +32,14 @@ public class Code05_BSNearLeft {
 		}
 		return -1;
 	}
-
-	// for test
-	//public static int[] generateRandomArray(int maxSize, int maxValue) {
-    //    return getInts(maxSize, maxValue);
-    //}
 	
 	// for test
 	public static void printArray(int[] arr) {
 		if (arr == null) {
 			return;
 		}
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
+		for (int j : arr) {
+			System.out.print(j + " ");
 		}
 		System.out.println();
 	}

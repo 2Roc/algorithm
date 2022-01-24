@@ -5,8 +5,8 @@ public class Code04_RegularExpressionMatch {
 
 	public static boolean isValid(char[] s, char[] e) {
 		// s中不能有'.' or '*'
-		for (int i = 0; i < s.length; i++) {
-			if (s[i] == '*' || s[i] == '.') {
+		for (char c : s) {
+			if (c == '*' || c == '.') {
 				return false;
 			}
 		}

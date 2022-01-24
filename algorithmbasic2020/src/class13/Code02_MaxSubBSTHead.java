@@ -79,9 +79,11 @@ public class Code02_MaxSubBSTHead {
 		Info rightInfo = process(X.right);
 		int min = X.value;
 		int max = X.value;
+
 		Node maxSubBSTHead = null;
 		int maxSubBSTSize = 0;
 		if (leftInfo != null) {
+			//说明有左子树
 			min = Math.min(min, leftInfo.min);
 			max = Math.max(max, leftInfo.max);
 			maxSubBSTHead = leftInfo.maxSubBSTHead;
@@ -95,8 +97,9 @@ public class Code02_MaxSubBSTHead {
 				maxSubBSTSize = rightInfo.maxSubBSTSize;
 			}
 		}
-		if ((leftInfo == null ? true : (leftInfo.maxSubBSTHead == X.left && leftInfo.max < X.value))
-				&& (rightInfo == null ? true : (rightInfo.maxSubBSTHead == X.right && rightInfo.min > X.value))) {
+		if ((leftInfo == null || (leftInfo.maxSubBSTHead == X.left && leftInfo.max < X.value))
+				&& (rightInfo == null || (rightInfo.maxSubBSTHead == X.right && rightInfo.min > X.value))) {
+			//可能性3，正确答案一定是这个
 			maxSubBSTHead = X;
 			maxSubBSTSize = (leftInfo == null ? 0 : leftInfo.maxSubBSTSize)
 					+ (rightInfo == null ? 0 : rightInfo.maxSubBSTSize) + 1;

@@ -11,8 +11,8 @@ public class Code03_LongestConsecutive {
 		for (int num : nums) {
 			if (!map.containsKey(num)) {
 				map.put(num, 1);
-				int preLen = map.containsKey(num - 1) ? map.get(num - 1) : 0;
-				int posLen = map.containsKey(num + 1) ? map.get(num + 1) : 0;
+				int preLen = map.getOrDefault(num - 1, 0);
+				int posLen = map.getOrDefault(num + 1, 0);
 				int all = preLen + posLen + 1;
 				map.put(num - preLen, all);
 				map.put(num + posLen, all);

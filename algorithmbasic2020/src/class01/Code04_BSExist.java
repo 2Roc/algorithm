@@ -36,12 +36,6 @@ public class Code04_BSExist {
 		}
 		return false;
 	}
-	
-	
-	// for test
-	//public static int[] generateRandomArray(int maxSize, int maxValue) {
-    //    return getInts(maxSize, maxValue);
-    //}
 
 	public static void main(String[] args) {
 		int testTime = 500000;

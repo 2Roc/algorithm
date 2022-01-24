@@ -12,6 +12,7 @@ public class Code02_EatGrass {
 		// 先手吃的草数
 		int eat = 1;
 		while (eat <= n) {
+			//当前一共n份草，先手吃掉want份，留给后手的是n-want
 			if (winner1(n - eat).equals("后手")) {
 				return "先手";
 			}

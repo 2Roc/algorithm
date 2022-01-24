@@ -41,8 +41,8 @@ public class Code01_ContainAllCharExactly {
 
 	public static boolean isCountEqual(char[] str, int L, char[] aim) {
 		int[] count = new int[256];
-		for (int i = 0; i < aim.length; i++) {
-			count[aim[i]]++;
+		for (char c : aim) {
+			count[c]++;
 		}
 		for (int i = 0; i < aim.length; i++) {
 			if (count[str[L + i]]-- == 0) {
@@ -59,8 +59,8 @@ public class Code01_ContainAllCharExactly {
 		char[] str2 = s2.toCharArray();
 		int M = str2.length;
 		int[] count = new int[256];
-		for (int i = 0; i < M; i++) {
-			count[str2[i]]++;
+		for (char c : str2) {
+			count[c]++;
 		}
 		int all = M;
 		char[] str1 = s1.toCharArray();
@@ -119,7 +119,5 @@ public class Code01_ContainAllCharExactly {
 			}
 		}
 		System.out.println("test finish");
-
 	}
-
 }

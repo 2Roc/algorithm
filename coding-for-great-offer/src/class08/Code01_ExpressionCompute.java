@@ -14,12 +14,12 @@ public class Code01_ExpressionCompute {
 	// 0) 负责的这一段的结果是多少
 	// 1) 负责的这一段计算到了哪个位置
 	public static int[] f(char[] str, int i) {
-		LinkedList<String> que = new LinkedList<String>();
+		LinkedList<String> que = new LinkedList<>();
 		int cur = 0;
 		int[] bra = null;
 		// 从i出发，开始撸串
 		while (i < str.length && str[i] != ')') {
-			if (str[i] >= '0' && str[i] <= '9') {
+			if (str[i] >= '0' && str[i] <= '9') {//遇到数字字符
 				cur = cur * 10 + str[i++] - '0';
 			} else if (str[i] != '(') { // 遇到的是运算符号
 				addNum(que, cur);
@@ -42,7 +42,7 @@ public class Code01_ExpressionCompute {
 			if (top.equals("+") || top.equals("-")) {
 				que.addLast(top);
 			} else {
-				cur = Integer.valueOf(que.pollLast());
+				cur = Integer.parseInt(que.pollLast());
 				num = top.equals("*") ? (cur * num) : (cur / num);
 			}
 		}
@@ -52,7 +52,7 @@ public class Code01_ExpressionCompute {
 	public static int getNum(LinkedList<String> que) {
 		int res = 0;
 		boolean add = true;
-		String cur = null;
+		String cur;
 		int num = 0;
 		while (!que.isEmpty()) {
 			cur = que.pollFirst();
@@ -61,11 +61,16 @@ public class Code01_ExpressionCompute {
 			} else if (cur.equals("-")) {
 				add = false;
 			} else {
-				num = Integer.valueOf(cur);
+				num = Integer.parseInt(cur);
 				res += add ? num : (-num);
 			}
 		}
 		return res;
+	}
+
+	public static void main(String[] args) {
+		String test = "52+13*(5+2-(5*(23-4)))-40+((3*2)+(5/2))";
+		System.out.println(calculate(test));
 	}
 
 }

@@ -9,8 +9,8 @@ public class Code05_GetMinStack {
 		private Stack<Integer> stackMin;
 
 		public MyStack1() {
-			this.stackData = new Stack<Integer>();
-			this.stackMin = new Stack<Integer>();
+			this.stackData = new Stack<>();
+			this.stackMin = new Stack<>();
 		}
 
 		public void push(int newNum) {
@@ -46,8 +46,8 @@ public class Code05_GetMinStack {
 		private Stack<Integer> stackMin;
 
 		public MyStack2() {
-			this.stackData = new Stack<Integer>();
-			this.stackMin = new Stack<Integer>();
+			this.stackData = new Stack<>();
+			this.stackMin = new Stack<>();
 		}
 
 		public void push(int newNum) {

@@ -21,7 +21,7 @@ public class Code03_DoubleEndsQueueToStackAndQueue {
 		public Node<T> tail;
 
 		public void addFromHead(T value) {
-			Node<T> cur = new Node<T>(value);
+			Node<T> cur = new Node<>(value);
 			if (head == null) {
 				head = cur;
 				tail = cur;
@@ -33,7 +33,7 @@ public class Code03_DoubleEndsQueueToStackAndQueue {
 		}
 
 		public void addFromBottom(T value) {
-			Node<T> cur = new Node<T>(value);
+			Node<T> cur = new Node<>(value);
 			if (head == null) {
 				head = cur;
 				tail = cur;
@@ -86,7 +86,7 @@ public class Code03_DoubleEndsQueueToStackAndQueue {
 		private DoubleEndsQueue<T> queue;
 
 		public MyStack() {
-			queue = new DoubleEndsQueue<T>();
+			queue = new DoubleEndsQueue<>();
 		}
 
 		public void push(T value) {
@@ -107,7 +107,7 @@ public class Code03_DoubleEndsQueueToStackAndQueue {
 		private DoubleEndsQueue<T> queue;
 
 		public MyQueue() {
-			queue = new DoubleEndsQueue<T>();
+			queue = new DoubleEndsQueue<>();
 		}
 
 		public void push(T value) {

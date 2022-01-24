@@ -14,7 +14,7 @@ public class Code06_BSAwesome {
 		}
 		int left = 1;
 		int right = arr.length - 2;
-		int mid = 0;
+		int mid;
 		while (left < right) {
 			mid = (left + right) / 2;
 			if (arr[mid] > arr[mid - 1]) {

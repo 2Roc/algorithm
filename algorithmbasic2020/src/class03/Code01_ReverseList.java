@@ -29,7 +29,7 @@ public class Code01_ReverseList {
 	//   c    ->   b    ->  a  ->  null
 	public static Node reverseLinkedList(Node head) {
 		Node pre = null;
-		Node next = null;
+		Node next;
 		while (head != null) {
 			next = head.next;
 			head.next = pre;
@@ -41,7 +41,7 @@ public class Code01_ReverseList {
 
 	public static DoubleNode reverseDoubleList(DoubleNode head) {
 		DoubleNode pre = null;
-		DoubleNode next = null;
+		DoubleNode next;
 		while (head != null) {
 			next = head.next;
 			head.next = pre;
@@ -169,8 +169,9 @@ public class Code01_ReverseList {
 			end = head;
 			head = head.next;
 		}
-		for (int i = 0; i < origin.size(); i++) {
-			if (!origin.get(i).equals(end.value)) {
+		for (Integer integer : origin) {
+			assert end != null;
+			if (!integer.equals(end.value)) {
 				return false;
 			}
 			end = end.last;

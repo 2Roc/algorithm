@@ -4,6 +4,7 @@ package class24;
 public class Code06_RemoveDuplicateLettersLessLexi {
 
 	// 在str中，每种字符都要保留一个，让最后的结果，字典序最小 ，并返回
+	//dcbbabca——结果：dabc
 	public static String removeDuplicateLetters1(String str) {
 		if (str == null || str.length() < 2) {
 			return str;
@@ -22,8 +23,9 @@ public class Code06_RemoveDuplicateLettersLessLexi {
 		// 0...break(之前) minACSIndex
 		// str[minACSIndex] 剩下的字符串str[minACSIndex+1...] -> 去掉str[minACSIndex]字符 -> s'
 		// s'...
-		return String.valueOf(str.charAt(minACSIndex)) + removeDuplicateLetters1(
-				str.substring(minACSIndex + 1).replaceAll(String.valueOf(str.charAt(minACSIndex)), ""));
+		return str.charAt(minACSIndex) + removeDuplicateLetters1(
+						str.substring(minACSIndex + 1)
+						.replaceAll(String.valueOf(str.charAt(minACSIndex)), ""));
 	}
 
 	public static String removeDuplicateLetters2(String s) {
@@ -32,8 +34,8 @@ public class Code06_RemoveDuplicateLettersLessLexi {
 		// 如果map[i] > -1，则代表ascii码值为i的字符的出现次数
 		// 如果map[i] == -1，则代表ascii码值为i的字符不再考虑
 		int[] map = new int[26];
-		for (int i = 0; i < str.length; i++) {
-			map[str[i] - 'a']++;
+		for (char c : str) {
+			map[c - 'a']++;
 		}
 		char[] res = new char[26];
 		int index = 0;
@@ -70,5 +72,4 @@ public class Code06_RemoveDuplicateLettersLessLexi {
 		}
 		return String.valueOf(res, 0, index);
 	}
-
 }

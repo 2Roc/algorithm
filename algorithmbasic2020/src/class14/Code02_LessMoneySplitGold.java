@@ -41,11 +41,11 @@ public class Code02_LessMoneySplitGold {
 
 	public static int lessMoney2(int[] arr) {
 		PriorityQueue<Integer> pQ = new PriorityQueue<>();
-		for (int i = 0; i < arr.length; i++) {
-			pQ.add(arr[i]);
+		for (int j : arr) {
+			pQ.add(j);
 		}
 		int sum = 0;
-		int cur = 0;
+		int cur;
 		while (pQ.size() > 1) {
 			cur = pQ.poll() + pQ.poll();
 			sum += cur;

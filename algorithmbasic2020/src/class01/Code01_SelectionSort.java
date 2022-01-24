@@ -34,45 +34,6 @@ public class Code01_SelectionSort {
 	}
 
 	// for test
-	public static int[] generateRandomArray(int maxSize, int maxValue) {
-		// Math.random()   [0,1)  
-		// Math.random() * N  [0,N)
-		// (int)(Math.random() * N)  [0, N-1]
-        return GenerateRandomArray.getInts(maxSize, maxValue);
-    }
-
-	// for test
-	public static int[] copyArray(int[] arr) {
-		if (arr == null) {
-			return null;
-		}
-		int[] res = new int[arr.length];
-		for (int i = 0; i < arr.length; i++) {
-			res[i] = arr[i];
-		}
-		return res;
-	}
-
-	// for test
-	public static boolean isEqual(int[] arr1, int[] arr2) {
-		if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null)) {
-			return false;
-		}
-		if (arr1 == null && arr2 == null) {
-			return true;
-		}
-		if (arr1.length != arr2.length) {
-			return false;
-		}
-		for (int i = 0; i < arr1.length; i++) {
-			if (arr1[i] != arr2[i]) {
-				return false;
-			}
-		}
-		return true;
-	}
-
-	// for test
 	public static void printArray(int[] arr) {
 		if (arr == null) {
 			return;
@@ -90,11 +51,11 @@ public class Code01_SelectionSort {
 		int maxValue = 100;
 		boolean succeed = true;
 		for (int i = 0; i < testTime; i++) {
-			int[] arr1 = generateRandomArray(maxSize, maxValue);
-			int[] arr2 = copyArray(arr1);
+			int[] arr1 = GenerateRandomArray.generateRandomArray(maxSize, maxValue);
+			int[] arr2 = Arrays.copyOf(arr1,arr1.length);
 			selectionSort(arr1);
 			comparator(arr2);
-			if (!isEqual(arr1, arr2)) {
+			if (!Arrays.equals(arr1, arr2)) {
 				succeed = false;
 				printArray(arr1);
 				printArray(arr2);
@@ -103,10 +64,9 @@ public class Code01_SelectionSort {
 		}
 		System.out.println(succeed ? "Nice!" : "Fucking fucked!");
 
-		int[] arr = generateRandomArray(maxSize, maxValue);
+		int[] arr = GenerateRandomArray.generateRandomArray(maxSize, maxValue);
 		printArray(arr);
 		selectionSort(arr);
 		printArray(arr);
 	}
-
 }
